@@ -8,10 +8,10 @@ public class Exercise04 {
 		int result = num1 + num2;
 		while (run) {
 		if (result != 5) {
-		}	
+		} run = false;
 		if (result == 5) {
-				System.out.println(num1 + "," + num2);
-				run = false;
+	    System.out.println(num1 + "," + num2);
+		  run = false;
 			}
 		}
 	}
