@@ -1,4 +1,4 @@
-package back;
+package bank;
 
 public class Customer {
 	private String bankAccount;
