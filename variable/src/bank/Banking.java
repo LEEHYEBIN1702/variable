@@ -49,10 +49,25 @@ public class Banking {
 					 if(customers[i] != null && accNo.equals(customers[i].getBankAccount())) {
 						int currentBalance = customers[i].getBalance();
 						customers[i].setBalance(currentBalance + balance);
+						customers[i].showAccountInfo();
 					 }
+
 				 }
+				
 			} else if (selectNo == 4) {
 				System.out.println("4.출금 선택했습니다.");
+				 System.out.println("계좌번호 선택> ");
+				 String accNo = scn.nextLine();
+				 System.out.println("출금액 입력> ");
+				 int balance = scn.nextInt();
+				 for(int i=0; i<customers.length; i++) {
+					 if(customers[i] != null && accNo.equals(customers[i].getBankAccount())) {
+						int currentBalance = customers[i].getBalance();
+						customers[i].setBalance(currentBalance - balance);
+						customers[i].showAccountInfo();
+					 }
+
+				 }
 			} else if (selectNo == 5) {
 				System.out.println("5.종료 선택했습니다.");
 				run = false;
